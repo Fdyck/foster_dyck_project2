@@ -1,6 +1,74 @@
 /* GLOBAL STYLING BEGINS */
 
+// VARIABLES
+$main-color: #f6a823;
+$background-color: #4f4f4f;
+$button-color: #05afc1;
+$font-color: #2c2c2c;
+$blog-accent: #285e64;
+$home-accent: #a82706;
+
+// MIX-INS
+
+@mixin font-size($font-size, $line-height) {
+    font-size: $font-size;
+    line-height: $line-height;
+}
+
 html{
-font-size: 62.5%;
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $font-color;
+}
+
+.wrapper {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.link {
+    text-decoration: none;
+    color: $font-color;
+}
+
+.nav {
+    background: $main-color;
+    @include font-size(2rem, 2.9rem);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem 0;
+    
+    &__list {
+        width: 50%;
+        margin: 0 auto;
+        list-style: none;
+        display: flex;
+        padding: 0;
+    }
+
+    &__item {
+        width: 20%;
+        margin-right: 5rem;
+        justify-content: center;
+
+        &__link:hover {
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+         &--last {
+        margin: 0;
+        }
+    }
+
+    &__item--no-read {
+        aria-hidden: true; //CAN I USE THIS?!? IS THERE ANOTHER WAY
+        @include font-size(3.2rem, inherit);
+        font-family: "Lora", serif;
+    }  
 }
 

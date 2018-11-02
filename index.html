@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sophie: by Foster Dyck</title>
-    <link href='https: //fonts.googleapis.com/css?family=Noto+Sans:400,700|Poppins:700' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Lora:700|Roboto:400,400i,500,500i,700,700i" rel="stylesheet">
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.4.1/css/all.css' integrity='sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz' crossorigin='anonymous'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <link type="image/png" href="assets/favicon/favicon.png" rel="icon">
@@ -16,11 +16,21 @@
 <!-- HEADER CONTENT STARTS -->
     <header class="header">
         <nav class="nav">
-            <ul class="nav__items">
-                <li class="nav__link">Home</li>
-                <li class="nav__link nav__link--after">About</li>
-                <li class="nav__link">Blog</li>
-                <li class="nav__link">Contact</li>
+            <div class="visually-hidden">Sophie</div>
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a href="#" class="nav__item__link link">Home</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#about" class="nav__item__link link">About</a>
+                </li>
+                <li class="nav__item nav__item--no-read">Sophie</li>
+                <li class="nav__item">
+                    <a href="#blog" class="nav__item__link link">Blog</a>
+                </li>
+                <li class="nav__item nav__item--last">
+                    <a href="#contact" class="nav__item__link link">Contact</a>
+                </li>
             </ul>
         </nav>
         <section class="title">
@@ -36,76 +46,85 @@
         <section class="section-content">
             <h2 class="section-content__title">Who is Sophie?</h2>
             <p class="section-content__copy">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim fugiat tempore officia, pariatur saepe quasi tempora dignissimos temporibus dicta et illo quisquam culpa nemo odio laborum maiores dolor numquam facere reprehenderit ipsam neque amet dolorem. Iste necessitatibus ducimus fuga ipsum officiis recusandae tempora, dolorem cumque, sit consectetur molestiae ratione explicabo, quas dolorum beatae reiciendis consequuntur cum eos exercitationem provident fugit?</p>
-            <a href="#" class="button">Find out More</a>
+            <a href="#" class="button link">Find out More</a>
         </section>
 <!-- WHO IS ENDS -->
 <!-- FAVOURITE THINGS STARTS -->
-        <section class="favourite intrests">
+        <section class="favourite intrests wrapper">
             <div class="intrests__image">
                 <img src="assets/home-image/home-image-2.jpg" alt="Dog with its head hanging out a car window.">
             </div>
             <div class="section__content">
                 <h2 class="section-content__title">Sophie's favourite things</h2>
                 <p class="section-content__copy">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias doloremque qui consequuntur illum reiciendis, in, vel ut officiis voluptates excepturi quisquam minus voluptatem facilis enim voluptatum dolor, aspernatur quia repellendus odio blanditiis?</p>
-                <a href="#" class="button">Read more</a>
+                <a href="#" class="button link">Read more</a>
             </div>
         </section>
 <!-- FAVOURITE THINGS ENDS -->
 <!-- TRAVEL STARTS -->
-        <section class="travel intrests">
-            <div class="intrests__image">
+        <section class="travel intrests wrapper">
+            <div class="intrests__image intrests__image--left">
                 <img src="assets/home-image/home-image-3.jpg" alt="Chairs on the beach with umbrellas over top of them.">
             </div>
             <div class="section-content">
                 <h2 class="section-content__title">Sophie's favourite things</h2>
-                <p class="section-content__copy">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias doloremque qui consequuntur illum reiciendis, in,
+                <p class="section-content__copy section-content__copy--left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias doloremque qui consequuntur illum reiciendis, in,
                     vel ut officiis voluptates excepturi quisquam minus voluptatem facilis enim voluptatum dolor, aspernatur quia
                     repellendus odio blanditiis?</p>
-                <a href="#" class="button">Read more</a>
+                <a href="#" class="button link">Read more</a>
             </div>
         </section>
 <!-- TRAVEL ENDS -->
 <!-- QUICKLINKS STARTS -->
-        <section class="quick-links">
+        <section class="quick-links wrapper">
             <div class="quick-links__topic">
-                <a href="#gallery" class="quick-links__links">
+                <a href="#gallery" class="quick-links__links link">
                     <img src="" alt="" class="quick-links__image">
                     <h2 class="section-content__title">Photos</h2>
                 </a>
-                <p class="quick-links__copy">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem dolores in eius quibusdam iusto nemo esse neque fugit provident? Aspernatur alias a eligendi quo laborum perferendis earum corporis fuga beatae?</p>
+                <p class="section-content__copy">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem dolores in eius quibusdam iusto nemo esse neque fugit provident? Aspernatur alias a eligendi quo laborum perferendis earum corporis fuga beatae?</p>
             </div>
             <div class="quick-links__topic">
-                <a href="#about"  class="quick-links__topic__link">
+                <a href="#about"  class="quick-links__topic__link link">
                     <img src="" alt="" class="quick-links__image">
                     <h2 class="section-content__title">About</h2>
                 </a>
-                <p class="quick-links__copy">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ad nostrum excepturi dolores veritatis! Eius quasi, inventore architecto repellat fugit eveniet error doloremque perferendis cum dolores atque facere qui necessitatibus!</p>
+                <p class="section-content__copy">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ad nostrum excepturi dolores veritatis! Eius quasi, inventore architecto repellat fugit eveniet error doloremque perferendis cum dolores atque facere qui necessitatibus!</p>
             </div>
             <div class="quick-links__topic">
-                <a href="#blog" class="quick-links__topic__link">
+                <a href="#blog" class="quick-links__topic__link link">
                     <img src="" alt="" class="quick-links__image">
                     <h2 class="section-content__title">Blog</h2>
                 </a>
-                <p class="quick-links__copy">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ad nostrum excepturi dolores veritatis! Eius quasi, inventore architecto repellat fugit eveniet error doloremque perferendis cum dolores atque facere qui necessitatibus!</p>
+                <p class="section-content__copy">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ad nostrum excepturi dolores veritatis! Eius quasi, inventore architecto repellat fugit eveniet error doloremque perferendis cum dolores atque facere qui necessitatibus!</p>
             </div>
             <div class="quick-links__topic">
-                <a href="#contact" class="quick-links__topic__link">
+                <a href="#contact" class="quick-links__topic__link link">
                     <img src="" alt="" class="quick-links__image">
                     <h2 class="section-content__title">Get in touch</h2>
                 </a>
-                <p class="quick-links__copy">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ad nostrum excepturi dolores veritatis! Eius quasi, inventore architecto repellat fugit eveniet error doloremque perferendis cum dolores atque facere qui necessitatibus!</p>
+                <p class="section-content__copy">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ad nostrum excepturi dolores veritatis! Eius quasi, inventore architecto repellat fugit eveniet error doloremque perferendis cum dolores atque facere qui necessitatibus!</p>
             </div>
-            <img src="assets/home-image/home-image-4.jpg" alt="Empty lecture all seats" class="quick-links__image--full">
         </section>
+        <!-- <section>
+            <img src="assets/home-image/home-image-4.jpg" alt="Empty lecture all seats" class="quick-links__image--full">
+        </section> -->
 <!-- QUICKLINKS ENDS -->
 <!-- JOURNEY STARTS -->
-        <section class="journey">
-
+        <section class="journey wrapper">
+            <img src="assets/home-image/home-image-5.jpg" alt="Sophie standing on a balcony looking over apartment buildings." class="journey__image">
+            <div class="section-content">
+                <h2 class="section-content__title">Sophie's journey</h2>
+                <p class="section-content__copy">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi veritatis beatae enim aspernatur. Tenetur possimus enim perferendis neque. Animi voluptatem distinctio placeat consequuntur, at porro! Rem laboriosam, quidem assumenda accusantium molestiae vitae debitis! Ut quis corporis architecto saepe cumque! Obcaecati nobis eos fugiat ad distinctio, minima in dolorem earum dolorum neque. Incidunt omnis tenetur, recusandae harum, quis quae ab ducimus quaerat esse, laudantium vitae numquam!</p>
+                <a href="#" class="button link">Find out more</a>
+            </div>
         </section>
 <!-- JOURNEY ENDS -->
 <!-- GALLERY STARTS -->
-        <section class="gallery">
-
+        <section class="gallery wrapper">
+            <img src="assets/home-image/home-image-6.jpg" alt="bycicle leaning against an orange wall." class="gallery__image">
+            <img src="assets/home-image/home-image-7.jpg" alt="apartment building with an arched walkway leading to the street." class="gallery__image">
+            <img src="assets/home-image/home-image-8.jpg" alt="Umbrella top with the words Banana Beach written on it." class="gallery__image">
         </section>
 <!-- GALLERY ENDS -->
     </main>

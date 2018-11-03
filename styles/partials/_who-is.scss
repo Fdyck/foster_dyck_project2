@@ -1,0 +1,13 @@
+.who-is {
+    background: $background-color;
+    margin: 0;
+
+    &__title {
+        margin: 0;
+        @include font-size(4.2rem, auto);
+    }
+
+    &__copy {
+        margin-right: 15%;
+    }
+}

@@ -1,0 +1,21 @@
+.journey--background {
+    background: $background-color;
+}
+
+.journey {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__image {
+         width: 30%; 
+
+         &__asset {
+             box-shadow: 1.5rem 1.5rem 0 $main-color;
+         }
+    }
+
+    &__content {
+        max-width: 65%;
+    }
+}

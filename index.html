@@ -7,6 +7,7 @@
     <title>Sophie: by Foster Dyck</title>
     <link href="https://fonts.googleapis.com/css?family=Lora:700|Roboto:400,400i,500,500i,700,700i" rel="stylesheet">
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.4.1/css/all.css' integrity='sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz' crossorigin='anonymous'>
+    <!-- <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css'> -->
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <link type="image/png" href="assets/favicon/favicon.png" rel="icon">
     <link rel='stylesheet' href='styles/style.css'>
@@ -16,7 +17,7 @@
 <!-- HEADER CONTENT STARTS -->
     <header class="header">
         <nav class="nav">
-            <div class="visually-hidden">Sophie</div>
+            <span class="visually-hidden">Sophie</span>
             <ul class="nav__list">
                 <li class="nav__item">
                     <a href="#" class="nav__item__link link">Home</a>
@@ -24,7 +25,7 @@
                 <li class="nav__item">
                     <a href="#about" class="nav__item__link link">About</a>
                 </li>
-                <li class="nav__item nav__item--no-read">Sophie</li>
+                <li class="nav__item nav__item--no-read" aria-hidden="true">Sophie</li>
                 <li class="nav__item">
                     <a href="#blog" class="nav__item__link link">Blog</a>
                 </li>
@@ -33,9 +34,9 @@
                 </li>
             </ul>
         </nav>
-        <section class="title">
-            <img src="assets/circle-text/circle-text.png" alt="It's all about" class="title__circle-text">
-            <h1 class="title__text">Sophie</h1>
+        <section class="title wrapper">
+            <span class="visuallyhidden">It's about Sophie</span>
+            <h1 class="title__text title__text--before">Sophie</h1>
             <img src="assets/home-image/home-image-1.jpg" alt="Sophie holding orange slices over her eyes." class="title__image">
         </section>
     </header>
@@ -43,18 +44,20 @@
 <!-- MAIN CONTENT STARTS -->
     <main id="about">
 <!-- WHO IS STARTS -->
-        <section class="section-content">
-            <h2 class="section-content__title">Who is Sophie?</h2>
-            <p class="section-content__copy">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim fugiat tempore officia, pariatur saepe quasi tempora dignissimos temporibus dicta et illo quisquam culpa nemo odio laborum maiores dolor numquam facere reprehenderit ipsam neque amet dolorem. Iste necessitatibus ducimus fuga ipsum officiis recusandae tempora, dolorem cumque, sit consectetur molestiae ratione explicabo, quas dolorum beatae reiciendis consequuntur cum eos exercitationem provident fugit?</p>
-            <a href="#" class="button link">Find out More</a>
+        <section class="section-content who-is" id="about">
+            <div class="wrapper">
+                <h2 class="section-content__title who-is__title">Who is Sophie?</h2>
+                <p class="section-content__copy who-is__copy">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis eveniet quos suscipit excepturi nemo temporibus ipsa ad commodi veritatis, quibusdam tempora alias facilis officiis sit voluptates possimus odit accusamus ab modi ipsam dolorum! Deleniti pariatur, laboriosam modi commodi eum enim doloremque! Ut aliquam sunt accusamus at autem sit, atque neque?</p>
+                <a href="#" class="button link button--large">Find out More</a>
+            </div>
         </section>
 <!-- WHO IS ENDS -->
 <!-- FAVOURITE THINGS STARTS -->
-        <section class="favourite intrests wrapper">
+        <section class="favourite intrests">
             <div class="intrests__image">
-                <img src="assets/home-image/home-image-2.jpg" alt="Dog with its head hanging out a car window.">
+                <img src="assets/home-image/home-image-2.jpg" alt="Dog with its head hanging out a car window." class="intrests__image__asset">
             </div>
-            <div class="section__content">
+            <div class="section__content intrests__content wrapper">
                 <h2 class="section-content__title">Sophie's favourite things</h2>
                 <p class="section-content__copy">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias doloremque qui consequuntur illum reiciendis, in, vel ut officiis voluptates excepturi quisquam minus voluptatem facilis enim voluptatum dolor, aspernatur quia repellendus odio blanditiis?</p>
                 <a href="#" class="button link">Read more</a>
@@ -62,12 +65,12 @@
         </section>
 <!-- FAVOURITE THINGS ENDS -->
 <!-- TRAVEL STARTS -->
-        <section class="travel intrests wrapper">
-            <div class="intrests__image intrests__image--left">
-                <img src="assets/home-image/home-image-3.jpg" alt="Chairs on the beach with umbrellas over top of them.">
+        <section class="travel intrests">
+            <div class="intrests__image travel__image">
+                <img src="assets/home-image/home-image-3.jpg" alt="Chairs on the beach with umbrellas over top of them." class="intrests__image__asset trevel__image__asset">
             </div>
-            <div class="section-content">
-                <h2 class="section-content__title">Sophie's favourite things</h2>
+            <div class="section-content intrests__content wrapper travel__content">
+                <h2 class="section-content__title">Where she's travelled</h2>
                 <p class="section-content__copy section-content__copy--left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias doloremque qui consequuntur illum reiciendis, in,
                     vel ut officiis voluptates excepturi quisquam minus voluptatem facilis enim voluptatum dolor, aspernatur quia
                     repellendus odio blanditiis?</p>
@@ -76,62 +79,68 @@
         </section>
 <!-- TRAVEL ENDS -->
 <!-- QUICKLINKS STARTS -->
-        <section class="quick-links wrapper">
-            <div class="quick-links__topic">
-                <a href="#gallery" class="quick-links__links link">
-                    <img src="" alt="" class="quick-links__image">
-                    <h2 class="section-content__title">Photos</h2>
-                </a>
-                <p class="section-content__copy">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem dolores in eius quibusdam iusto nemo esse neque fugit provident? Aspernatur alias a eligendi quo laborum perferendis earum corporis fuga beatae?</p>
-            </div>
-            <div class="quick-links__topic">
-                <a href="#about"  class="quick-links__topic__link link">
-                    <img src="" alt="" class="quick-links__image">
-                    <h2 class="section-content__title">About</h2>
-                </a>
-                <p class="section-content__copy">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ad nostrum excepturi dolores veritatis! Eius quasi, inventore architecto repellat fugit eveniet error doloremque perferendis cum dolores atque facere qui necessitatibus!</p>
-            </div>
-            <div class="quick-links__topic">
-                <a href="#blog" class="quick-links__topic__link link">
-                    <img src="" alt="" class="quick-links__image">
-                    <h2 class="section-content__title">Blog</h2>
-                </a>
-                <p class="section-content__copy">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ad nostrum excepturi dolores veritatis! Eius quasi, inventore architecto repellat fugit eveniet error doloremque perferendis cum dolores atque facere qui necessitatibus!</p>
-            </div>
-            <div class="quick-links__topic">
-                <a href="#contact" class="quick-links__topic__link link">
-                    <img src="" alt="" class="quick-links__image">
-                    <h2 class="section-content__title">Get in touch</h2>
-                </a>
-                <p class="section-content__copy">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ad nostrum excepturi dolores veritatis! Eius quasi, inventore architecto repellat fugit eveniet error doloremque perferendis cum dolores atque facere qui necessitatibus!</p>
+        <section class="quick-links--background">
+            <div class="quick-links wrapper">
+                <div class="quick-links__topic">
+                    <a href="#gallery" class="quick-links__link link">
+                        <i class="fas fa-image section-content__title quick-links__title quick-links__title__image"></i>
+                        <h2 class="section-content__title quick-links__title--text">Photos</h2>
+                    </a>
+                    <p class="section-content__copy quick-links__copy"> Dolorem dolores in eius quibusdam iusto nemo esse neque fugit provident? Aspernatur alias a eligendi quo laborum? Lorem ipsum amet consectetur.</p>
+                </div>
+                <div class="quick-links__topic">
+                    <a href="#about"  class="quick-links__link link">
+                        <i class="fas fa-user section-content__title quick-links__title quick-links__title__image"></i>
+                        <h2 class="section-content__title quick-links__title--text">About</h2>
+                    </a>
+                    <p class="section-content__copy quick-links__copy">Inventore architecto repellat fugit eveniet error doloremque perferendis cum dolores atque facere qui necessitatibus! Lorem, ipsum dolor sitelit.</p>
+                </div>
+                <div class="quick-links__topic">
+                    <a href="#blog" class="quick-links__link link">
+                        <i class="fas fa-desktop section-content__title quick-links__title quick-links__title__image"></i>
+                        <h2 class="section-content__title quick-links__title--text">Blog</h2>
+                    </a>
+                    <p class="section-content__copy quick-links__copy">Inventore architecto repellat fugit eveniet error doloremque perferendis cum dolores atque facere qui necessitatibus! Lorem, ipsum dolor consectetur.</p>
+                </div>
+                <div class="quick-links__topic">
+                    <a href="#contact" class="quick-links__link link">
+                        <i class="fas fa-phone section-content__title quick-links__title quick-links__title__image"></i> 
+                        <h2 class="section-content__title quick-links__title--text">Get in touch</h2>  
+                    </a>
+                    <p class="section-content__copy quick-links__copy">Inventore architecto repellat fugit eveniet error doloremque perferendis cum dolores atque facere qui necessitatibus! Lorem, ipsum dolor sit amet.</p>
+                </div>
             </div>
         </section>
-        <!-- <section>
+        <section>
             <img src="assets/home-image/home-image-4.jpg" alt="Empty lecture all seats" class="quick-links__image--full">
-        </section> -->
+        </section>
 <!-- QUICKLINKS ENDS -->
 <!-- JOURNEY STARTS -->
-        <section class="journey wrapper">
-            <img src="assets/home-image/home-image-5.jpg" alt="Sophie standing on a balcony looking over apartment buildings." class="journey__image">
-            <div class="section-content">
-                <h2 class="section-content__title">Sophie's journey</h2>
-                <p class="section-content__copy">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi veritatis beatae enim aspernatur. Tenetur possimus enim perferendis neque. Animi voluptatem distinctio placeat consequuntur, at porro! Rem laboriosam, quidem assumenda accusantium molestiae vitae debitis! Ut quis corporis architecto saepe cumque! Obcaecati nobis eos fugiat ad distinctio, minima in dolorem earum dolorum neque. Incidunt omnis tenetur, recusandae harum, quis quae ab ducimus quaerat esse, laudantium vitae numquam!</p>
-                <a href="#" class="button link">Find out more</a>
+        <section class="journey--background">
+            <div class="journey wrapper">
+                <div class="journey__image">
+                    <img src="assets/home-image/home-image-5.jpg" alt="Sophie standing on a balcony looking over apartment buildings." class="journey__image__asset">
+                </div>
+                <div class="section-content journey__content">
+                    <h2 class="section-content__title">Sophie's journey</h2>
+                    <p class="section-content__copy journey__content__copy">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi veritatis beatae enim aspernatur. Tenetur possimus enim perferendis neque. Animi voluptatem distinctio placeat consequuntur, at porro! Rem laboriosam, quidem assumenda accusantium molestiae vitae debitis! Ut quis corporis architecto saepe cumque! Obcaecati nobis eos fugiat ad distinctio, minima in dolorem earum dolorum neque. </p>
+                    <a href="#" class="button link button--large">Find out more</a>
+                </div>
             </div>
         </section>
 <!-- JOURNEY ENDS -->
 <!-- GALLERY STARTS -->
-        <section class="gallery wrapper">
+        <section class="gallery wrapper" id="gallery">
             <img src="assets/home-image/home-image-6.jpg" alt="bycicle leaning against an orange wall." class="gallery__image">
             <img src="assets/home-image/home-image-7.jpg" alt="apartment building with an arched walkway leading to the street." class="gallery__image">
-            <img src="assets/home-image/home-image-8.jpg" alt="Umbrella top with the words Banana Beach written on it." class="gallery__image">
+            <img src="assets/home-image/home-image-8.jpg" alt="Umbrella top with the words Banana Beach written on it." class="gallery__image--last">
         </section>
 <!-- GALLERY ENDS -->
     </main>
 <!-- MAIN CONTENT ENDS -->
 <!-- FOOTER CONTENT STARTS -->
     <footer class="copyright">
-        <p class="copyright__text">Copyright &copy 2018 HackerYou</p>
+        <p class="copyright__copy section-content__copy">Copyright &copy 2018 HackerYou</p>
     </footer>
 <!-- FOOTER CONTENT ENDS -->
 </body>

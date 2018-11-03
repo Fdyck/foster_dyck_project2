@@ -2,7 +2,7 @@
 
 // VARIABLES
 $main-color: #f6a823;
-$background-color: #4f4f4f;
+$background-color: #f0efed;
 $button-color: #05afc1;
 $font-color: #2c2c2c;
 $blog-accent: #285e64;
@@ -34,16 +34,18 @@ html{
 }
 
 .nav {
-    background: $main-color;
+    background: rgba(246, 168, 35, 0.5);
     @include font-size(2rem, 2.9rem);
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 2rem 0;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
     
     &__list {
-        width: 50%;
         margin: 0 auto;
         list-style: none;
         display: flex;
@@ -66,9 +68,48 @@ html{
     }
 
     &__item--no-read {
-        aria-hidden: true; //CAN I USE THIS?!? IS THERE ANOTHER WAY
         @include font-size(3.2rem, inherit);
         font-family: "Lora", serif;
+        // aria-hidden: true;
     }  
 }
+
+.title__text {
+    @include font-size(15rem, 9.2rem);
+}
+
+.section-content {
+    padding: 10% 0;
+    
+    &__title {
+        @include font-size(3.2rem, auto);
+    }
+
+    &__copy {
+        @include font-size(2rem, 3.2rem);
+        font-weight: normal;
+        text-transform: none;
+    }
+}
+
+.button {
+    @include font-size(2rem, 3.2rem);
+    background: $button-color;
+    padding: 2%;
+
+    &--large {
+        padding: 1%;
+    }
+
+    &:hover {
+        background: $main-color;
+        color: white;
+        transition: all 0.3s ease-in;
+    }
+}
+
+
+
+
+
 

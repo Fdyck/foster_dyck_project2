@@ -28,11 +28,6 @@ html{
     margin: 0 auto;
 }
 
-.link {
-    text-decoration: none;
-    color: $font-color;
-}
-
 .nav {
     background: rgba(246, 168, 35, 0.5);
     @include font-size(2rem, 2.9rem);
@@ -89,24 +84,63 @@ html{
         @include font-size(2rem, 3.2rem);
         font-weight: normal;
         text-transform: none;
+        
+        &--italic {
+            font-style: italic;
+        }
+    }
+}
+
+
+.link {
+    text-decoration: none;
+    color: $font-color;
+
+    &--blog {
+        color: $blog-accent;
+        font-weight: bold;
+
+        &--hover:hover {
+            color: $main-color;
+            transition: all 0.3s ease-in;
+        }
     }
 }
 
 .button {
     @include font-size(2rem, 3.2rem);
     background: $button-color;
-    padding: 2%;
-
-    &--large {
-        padding: 1%;
-    }
+    padding: 1rem;
 
     &:hover {
         background: $main-color;
         color: white;
         transition: all 0.3s ease-in;
     }
+
+    &__comment {
+        text-transform: uppercase;
+        font-weight: bold;
+    }
 }
+
+.border-box {
+    background: white;
+    padding: 3rem;
+    margin: 2rem;
+
+    &--orange-bottom {
+        border-bottom: 1rem solid $main-color;
+    }
+
+    &--gray {
+        background: $background-color;
+    }
+}
+
+
+
+
 
 
 

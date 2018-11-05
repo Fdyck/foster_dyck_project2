@@ -40,10 +40,11 @@
     }
 }
 
+// Media Queries Start
 
 @media (max-width: 1050px) {
     .title__text--before {
-        text-shadow: 2px 2px white;
+        text-shadow: 2px 2px $main-color;
     }
 }
 

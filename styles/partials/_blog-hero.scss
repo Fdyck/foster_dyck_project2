@@ -1,0 +1,25 @@
+.blog__header {
+    height: 70vh;
+    background: url(../assets/blog-image/blog-image-1.jpg), $main-color;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+}
+
+.blog__title {
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    position: relative;
+    top: 90%;
+
+    &__text {
+        margin: 0;
+        font-size: 8rem;
+    }
+}
+
+// Media Queries Start
+

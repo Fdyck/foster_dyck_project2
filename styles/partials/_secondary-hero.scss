@@ -1,4 +1,4 @@
-.blog__header {
+.secondary__header {
     height: 70vh;
     background: url(../assets/blog-image/blog-image-1.jpg), $main-color;
     background-size: cover;
@@ -8,7 +8,7 @@
     background-repeat: no-repeat;
 }
 
-.blog__title {
+.secondary__title {
     display: flex;
     flex-direction: column;
     justify-content: baseline;

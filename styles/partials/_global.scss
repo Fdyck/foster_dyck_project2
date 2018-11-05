@@ -96,12 +96,24 @@ html{
     text-decoration: none;
     color: $font-color;
 
-    &--blog {
+    &--secondary {
         color: $blog-accent;
         font-weight: bold;
 
         &--hover:hover {
             color: $main-color;
+            transition: all 0.3s ease-in;
+        }
+    }
+
+    &--social {
+        
+        &--icon {
+            color: $main-color;
+        }
+
+        &:hover i {
+            color: $button-color;
             transition: all 0.3s ease-in;
         }
     }

@@ -30,7 +30,11 @@
     &__title {
         padding: 2rem;
         margin-right: 2rem;
+        font-size: 2rem;
         
+        &--text {
+            margin: 0;
+        }
         
         &__image {
             background: $main-color;
@@ -39,7 +43,9 @@
     }
 
     &__copy {
-        margin-left: 15%;
+        margin-left: 13%;
+        margin-right: 5%;
+        padding-top: 0;
     }   
 
     &__image--full {

@@ -8,17 +8,31 @@
     <link href="https://fonts.googleapis.com/css?family=Lora:700|Roboto:400,400i,500,500i,700,700i" rel="stylesheet">
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.4.1/css/all.css' integrity='sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz'
         crossorigin='anonymous'>
-    <!-- <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css'> -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <link type="image/png" href="assets/favicon/favicon.png" rel="icon">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel='stylesheet' href='styles/style.css'>
 </head>
 <body class="secondary__body">
     <a href="#secondary-content" class="skip-link">Skip this menu to go to content.</a>
 <!-- HEADER CONTENT STARTS -->
     <header class="secondary__header">
-        <nav class="nav">
+        <nav class="nav animated bounceInDown">
             <span class="visually-hidden">Sophie</span>
+            <a href="javascript:void(0)" class="open link nav__item__link" onclick="openNav()">&#9776;</a>
+            <div id="hamburger" class="hamburger">
+                <a href="javascript:void(0)" class="close link" onclick="closeNav()">&times;</a>
+                <ul class="hamburger__nav">
+                    <li class="hamburger__nav__item">
+                        <h2 class="section-content__title hamburger__nav__item--title">Sophie</h2>
+                    </li>
+                    <li class="hamburger__nav__item"><a href="index.html" class="link nav__item__link">Home</a></li>
+                    <li class="hamburger__nav__item"><a href="#about" class="link nav__item__link">About</a></li>
+                    <li class="hamburger__nav__item"><a href="blog.html" class="link nav__item__link">Blog</a></li>
+                    <li class="hamburger__nav__item"><a href="contact.html" class="link nav__item__link">Contact</a></li>
+                </ul>
+            </div>
             <ul class="nav__list">
                 <li class="nav__item">
                     <a href="index.html" class="nav__item__link link">Home</a>
@@ -26,7 +40,7 @@
                 <li class="nav__item">
                     <a href="#about" class="nav__item__link link">About</a>
                 </li>
-                <li class="nav__item nav__item--no-read" aria-hidden="true">Sophie</li>
+                <li class="nav__item nav__item--no-read animated infinite pulse" aria-hidden="true">Sophie</li>
                 <li class="nav__item">
                     <a href="blog.html" class="nav__item__link link">Blog</a>
                 </li>
@@ -35,8 +49,8 @@
                 </li>
             </ul>
         </nav>
-        <section class="secondary__title wrapper">
-            <h1 class="title__text secondary__title__text">Contact</h1>
+        <section class="secondary__title wrapper animated rotateInDownLeft">
+            <h1 class="title__text secondary__title__text">Blog</h1>
         </section>
     </header>
 <!-- HEADER CONTENT ENDS -->
@@ -44,16 +58,14 @@
     <main id="secondary-content" class="wrapper secondary">
 <!-- ASIDE STARTS -->
         <aside class="secondary__aside">
-            <div class="border-box secondary__aside__top">
-                <div class="secondary__aside__top__image">
-                    <img src="assets/blog-image/blog-image-2.jpg" alt="Sophie holding orange slices over her eyes." class="secondary__aside__top__image__asset">
-                </div>
+            <div class="border-box secondary__aside__top animated bounceInDown">
+                <img src="assets/blog-image/blog-image-2.jpg" alt="Sophie holding orange slices over her eyes." class="secondary__aside__top__image">
                 <div class="section-content secondary__aside__top__content">
                     <h2 class="section-content__title">About Sophie</h2>
-                    <p class="section-content__copy">Lorem ipsum dolor sit amet con sectetur, adipisicing elit. <a href="index.html" class="link link--secondary link--secondary--hover">Find out more.</a></p>
+                    <p class="section-content__copy">Lorem ipsum dolor sit amet con sectetur, adipisicing elit. Lorem ipsum dolor. <a href="index.html" class="link link--secondary link--secondary--hover">Find out more.</a></p>
                 </div>
             </div>
-            <div class="border-box secondary__aside__bottom">
+            <div class="border-box secondary__aside__bottom" data-aos="fade-up">
                 <h2 class="section-content__title">Recenet posts</h2>
                 <ul class="section-content__copy">
                     <li><a href="#" class="link link--secondary--hover">Lorem ipsum pluribus sit.</a></li>
@@ -66,7 +78,7 @@
 <!-- ASIDE ENDS -->
 <!-- ARTICLE STARTS -->
         <section class="secondary__main">
-            <article class="border-box border-box--orange-bottom secondary__main__article">
+            <article class="border-box border-box--orange-bottom secondary__main__article secondary__copy--justify animated bounceInDown">
                 <h2 class="section-content__title">Why I became a blogger</h2>
                 <h3 class="section-content__copy section-content__copy--italic">Monday October 8th, 2018 by <a href="index.html" class="link link--secondary link--secondary--hover">Sophie Barlow</a></h3>
                 <p class="section-content__copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio dolorum delectus earum pariatur. Eligendi corporis nisi aut temporibus quo reiciendis itaque quas explicabo voluptatem! Nesciunt nisi totam sint quae id. Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
@@ -80,7 +92,7 @@
                 amet! Voluptates tempore sit commodi maxime non deserunt, laudantium ipsa quo enim, quae iure blanditiis dolore.
                 Explicabo? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero, cupiditate.</p>
             </article>
-            <article class="border-box secondary__main__article">
+            <article class="border-box secondary__main__article" data-aos="fade-up">
                 <div class="comment-image">
                     <img src="assets/blog-image/blog-image-3.jpg" alt="Image of Jeremy" class="comment-image__asset">
                 </div>
@@ -89,7 +101,7 @@
                     <p class="section-content__copy">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi quas quos id corporis architecto eius exercitationem alias fugiat neque veniam! Error possimus, aperiam quas cumque, eveniet laboriosam delectus nulla illum ad voluptas.</p>
                 </div>
             </article>
-            <article class="border-box secondary__main__article border-box--orange-bottom">
+            <article class="border-box secondary__main__article border-box--orange-bottom" data-aos="fade-up">
                 <div class="comment-image">
                     <img src="assets/blog-image/blog-image-4.jpg" alt="Image of Julia" class="comment-image__asset">
                 </div>
@@ -100,7 +112,7 @@
             </article>
 <!-- CONTACT FORM STARTS -->
             <form action="http://www.focuspocus.io/magic/foster@fosterdyck.com" method="POST" action="comment" enctype="multipart/form-data"
-                class="comment section-content__copy">
+                class="comment section-content__copy" data-aos="fade-up">
                 <label for="name" class="visually-hidden">Enter your name</label>
                 <input type="text" id="name" name="name" placeholder="Name" class="comment__input--info comment__input">
                 <label for="email" class="visually-hidden">Enter your email address</label>
@@ -119,5 +131,23 @@
     <p class="copyright__copy section-content__copy">Copyright &copy 2018 HackerYou</p>
 </footer>
 <!-- FOOTER CONTENT ENDS -->
+<!-- JAVA STARTS -->
+    <script>
+        function openNav() {
+            document.getElementById("hamburger").style.width = "50%";
+            // document.getElementsByClassName("open").style.display = "none";
+        }
+
+        function closeNav() {
+            document.getElementById("hamburger").style.width = "0%";
+        }
+    </script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+<!-- JAVA ENDS -->
 </body>
 </html>

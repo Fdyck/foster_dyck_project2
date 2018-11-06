@@ -31,7 +31,7 @@
             height: 60%;
         }
     }
-         
+
     .title__image {
         max-height: 100%;
         box-shadow: 1.5rem 1.5rem 0 white;
@@ -44,22 +44,45 @@
 
 @media (max-width: 1050px) {
     .title__text--before {
-        text-shadow: 2px 2px $main-color;
+        text-shadow: 3px 3px white;
     }
 }
 
 @media (max-width: 850px) {
+
     .header {
+        height: 100vh;
         background: url(../assets/home-image/home-image-1.jpg);
         background-size: cover;
         background-repeat: no-repeat;
     }
 
     .title {
-        align-items: flex-start;
+
+        &__text {
+            font-size: 12rem;
+            }
 
         &__image {
             display: none;
+        }
+    }
+}
+
+@media (max-width: 650px) {
+     .title {
+     
+        &__text {
+            font-size: 7rem;
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .title {
+     
+        &__text {
+            font-size: 5rem;
         }
     }
 }

@@ -23,9 +23,17 @@ html{
     color: $font-color;
 }
 
+a:focus {
+    outline: none;
+}
+
 .wrapper {
     max-width: 80%;
     margin: 0 auto;
+}
+
+img {
+    display: block;
 }
 
 .nav {
@@ -52,9 +60,12 @@ html{
         margin-right: 5rem;
         justify-content: center;
 
-        &__link:hover {
-            color: white;
-            transition: all 0.3s ease;
+        &__link {
+
+            &:hover {
+                color: white;
+                transition: all 0.3s ease;
+            }
         }
 
          &--last {
@@ -67,6 +78,58 @@ html{
         font-family: "Lora", serif;
         // aria-hidden: true;
     }  
+}
+
+.hamburger {
+    display: none;
+    height: 100vh;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: rgb(246, 168, 35);
+    transition: 0.5s;
+    z-index: 1;
+
+    &__nav {
+        width: 100%;
+        position: relative;
+        top: 15%;
+        width: 100%;
+        margin: 15% 0 0 0;
+
+        &__item {
+            width: 100%;
+            display: block;
+            font-size: 150%;
+            padding: 10% 15%;
+            text-align: center;
+
+            &--title {
+                color: black;
+                text-shadow: 2px 2px white; 
+                border-bottom: 2px solid black;
+                padding-bottom: 1rem;
+            }
+        }
+    }
+}
+
+.open {
+    display: none;
+    position: absolute;
+    top: 2rem;
+    right: 5%;
+    cursor: pointer;
+    transform: scale(3);
+}
+
+.close {
+    position: absolute;
+    top: 2rem;
+    right: 17%;
+    width: 2.5%;
+    transform: scale(3);
 }
 
 .title__text {
@@ -152,8 +215,32 @@ html{
 
 
 
+@media (max-width: 675px) {
+    .section-content {
+        text-align: center;
+    }
 
+    .nav {
+        height: 0vh;
+        padding: 0;
+    }
 
+    .nav__list {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .open {
+        display: block;
+    }
+
+    .close {
+        right: 14%;
+    }
+}
 
 
 

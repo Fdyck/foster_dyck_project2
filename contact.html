@@ -9,9 +9,10 @@
     <link href="https://fonts.googleapis.com/css?family=Lora:700|Roboto:400,400i,500,500i,700,700i" rel="stylesheet">
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.4.1/css/all.css' integrity='sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz'
         crossorigin='anonymous'>
-    <!-- <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css'> -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <link type="image/png" href="assets/favicon/favicon.png" rel="icon">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel='stylesheet' href='styles/style.css'>
 </head>
 
@@ -21,6 +22,19 @@
     <header class="secondary__header contact__header">
         <nav class="nav">
             <span class="visually-hidden">Sophie</span>
+            <a href="javascript:void(0)" class="open link nav__item__link" onclick="openNav()">&#9776;</a>
+            <div id="hamburger" class="hamburger">
+                <a href="javascript:void(0)" class="close link" onclick="closeNav()">&times;</a>
+                <ul class="hamburger__nav">
+                    <li class="hamburger__nav__item">
+                        <h2 class="section-content__title hamburger__nav__item--title">Sophie</h2>
+                    </li>
+                    <li class="hamburger__nav__item"><a href="index.html" class="link nav__item__link">Home</a></li>
+                    <li class="hamburger__nav__item"><a href="#about" class="link nav__item__link">About</a></li>
+                    <li class="hamburger__nav__item"><a href="blog.html" class="link nav__item__link">Blog</a></li>
+                    <li class="hamburger__nav__item"><a href="contact.html" class="link nav__item__link">Contact</a></li>
+                </ul>
+            </div>
             <ul class="nav__list">
                 <li class="nav__item">
                     <a href="index.html" class="nav__item__link link">Home</a>
@@ -37,8 +51,8 @@
                 </li>
             </ul>
         </nav>
-        <section class="secondary__title wrapper">
-            <h1 class="title__text secondary__title__text">Get in touch</h1>
+        <section class="secondary__title wrapper animated rotateInDownLeft">
+            <h1 class="title__text secondary__title__text contact__title">Get in touch</h1>
         </section>
     </header>
     <!-- HEADER CONTENT ENDS -->
@@ -47,7 +61,7 @@
         <section class="secondary__main contact__main secondary">
         <!-- ASIDE STARTS -->
             <aside class="secondary__aside contact__aside">
-                <div class="border-box secondary__aside__top contact__aside__content">
+                <div class="border-box secondary__aside__top contact__aside__content animated bounceInDown" >
                     <nav>
                         <ul class="contact__aside__content__social section-content__copy">
                             <li>
@@ -76,16 +90,15 @@
                             </li>
                         </ul>
                     </nav>
-                    <div class="section-content secondary__aside__top__content contact__aside__content__copy">
                         <p class="section-content__copy contact__aside__content__title">info@email.com</p>
-                        <p class="section-content__copy">123 - 456 - 7890</br>123 Queen street west, unit 10</br> Toronto, Ontario</br>
+                        <p class="section-content__copy contact__aside__content__copy">123 - 456 - 7890</br>123 Queen street west, unit 10</br> Toronto, Ontario</br>
                         M5V2D5</p>
                     </div>
                 </div>
             </aside>
             <!-- ASIDE ENDS -->
             <!-- CONTACT FORM STARTS -->
-            <form action="http://www.focuspocus.io/magic/foster@fosterdyck.com" method="POST" action="comment" enctype="multipart/form-data" class="comment section-content__copy border-box border-box--gray">
+            <form action="http://www.focuspocus.io/magic/foster@fosterdyck.com" method="POST" action="comment" enctype="multipart/form-data" class="comment section-content__copy border-box border-box--gray animated bounceInDown">
                 <label for="name" class="visually-hidden">Enter your name</label>
                 <input type="text" id="name" name="name" placeholder="Name" class="comment__input--info comment__input">
                 <label for="email" class="visually-hidden">Enter your email address</label>
@@ -103,5 +116,23 @@
         <p class="copyright__copy section-content__copy">Copyright &copy 2018 HackerYou</p>
     </footer>
         <!-- FOOTER CONTENT ENDS -->
+        <!-- JAVA STARTS -->
+        <script>
+            function openNav() {
+                document.getElementById("hamburger").style.width = "50%";
+                // document.getElementsByClassName("open").style.display = "none";
+            }
+
+            function closeNav() {
+                document.getElementById("hamburger").style.width = "0%";
+            }
+        </script>
+        
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        
+        <script>
+            AOS.init();
+        </script>
+        <!-- JAVA ENDS -->
 </body>      
 </html>

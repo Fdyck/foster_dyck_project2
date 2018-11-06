@@ -7,10 +7,15 @@
     background-repeat: no-repeat;
 }
 
+.contact__main {
+    width: 100%;
+}
+
 .contact__aside__content {
 
     &__copy {
         padding-top: 0;
+        text-transform: capitalize;
     }
 
     &__title {
@@ -27,4 +32,35 @@
             padding: 0 1.5rem;
         }
     }
+}
+
+@media (max-width: 800px) {
+    .contact__aside__content {
+        width: 70%;
+        align-self: center;
+    }
+}
+
+@media (max-width: 700px) {
+    .contact__title {
+        font-size: 5rem;
+    }  
+}
+
+@media (max-width: 600px) {
+    .contact__aside__content {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .contact__title {
+        font-size: 4rem;
+    }  
+}
+
+@media (max-width: 360px) {
+    .contact__title {
+        font-size: 3rem;
+    }  
 }
